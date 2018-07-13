@@ -17,7 +17,6 @@ I've elected to keep them both in, just in case someone prefers the use of one o
 
 --------------I've changed EFT classes up to GetLastTransaction, changing access modifiers to package-private or private where IntelliJ recommends.--------------
 
---------------If this fucks up when trying to import to a new project then this note is to let me know where to do the reverting to everything public.--------------
 
 # Getting Started
 TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
@@ -101,7 +100,7 @@ Handle the returned event.
 
 
 # Contribute
-This is the best thing ever written and I refuse to entertain any ideas that aren't my own.
+If there is something missing, or something that doesn't work the way it should then please send an email to devsupport@pceftpos.com.au and we'll add it in/take it out.
 
 If you want to learn more about creating good readme files then refer the following [guidelines](https://www.visualstudio.com/en-us/docs/git/create-a-readme). You can also seek inspiration from the below readme files:
 - [ASP.NET Core](https://github.com/aspnet/Home)
