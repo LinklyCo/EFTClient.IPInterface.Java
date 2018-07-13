@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SDK.EFTClient.Java.iml" filepath="$PROJECT_DIR$/SDK.EFTClient.Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pceftpos.eftclient.ipinterface.iml" filepath="$PROJECT_DIR$/pceftpos.eftclient.ipinterface.iml" />
     </modules>
   </component>
 </project>

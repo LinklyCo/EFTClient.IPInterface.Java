@@ -1,5 +1,6 @@
 # Introduction 
 TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project.
+
 This is essentially a copy of the C# IPInterface module from PC-EFTPOS. It doesn't have all the classes the C# does, but it has the ones that most POS vendors will use, and exempts the niche classes.
 Most of the classes have explicit getters and setters for the properties. The setters are there because I was copying the C#, and the {get;set;} syntax didn't work. I realised some time through that it was unnecessary.
 However, the JSON.org library I've included to make response displaying a bit easier requires the getProperty and isProperty methods to be defined in the class so it can work.
@@ -14,10 +15,6 @@ Tbh I don't really understand this one either but it looks a little nicer, it ru
 
 I've elected to keep them both in, just in case someone prefers the use of one over the other.
 
-
---------------I've changed EFT classes up to GetLastTransaction, changing access modifiers to package-private or private where IntelliJ recommends.--------------
-
-
 # Getting Started
 TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
 1.	Installation process
@@ -31,15 +28,17 @@ TODO: Guide users through getting your code up and running on their own system. 
 
 I built a .JAR file excluding the dialogs (and including the dialogs) and was able to use the classes just fine.
 In fact, using the JAR with the window classes, I could build the whole project with one method
+```
     public static void main([] args){
     AsyncMainWindow.main(null);
     }
-
+```
 and it created the UI, the sockets, and I was able to carry on like I had the original project.
 
 # Build and Test
-TODO: Describe and show how to build your code and run the tests. 
-This is using the IPClient, not the IPClientAsync, from the C# code. As such, you need to check the responses and raise events for the POS to handle. General flow is:
+TODO: Describe and show how to build your code and run the tests.
+
+This is using the IPClientAsync, not the IPClient, from the C# code. General flow is:
 * Create Request
 * Send request on socket
 * Check socket for response (in this instance the loop runs constantly)
@@ -47,23 +46,25 @@ This is using the IPClient, not the IPClientAsync, from the C# code. As such, yo
 * Handle event i.e. displays, receipts etc.
 
 You will need a class that implements PCEFTPOSEventListener.
-
 The SocketEventListener implements SocketReceive and SocketSend, these are the abstracted read and write methods to the socket object.
-
 The SocketReceive method parses the message and passes the messages to the PCEFTPOSEventListener object through a method call.
 
 i.e.
+```
 if (EFTResponse r instanceof EFTTransactionResponse)
     listener.onTransactionEvent(r);
+```
 
 The PCEFTPOSEventListener will handle the events raised by the SocketEventListener.
 
 i.e.
-
+```
 @Override
 public void onTransactionEvent(EFTTransactionResponse msg){
 //Do stuff
 }
+```
+
 In this project the AsyncSocketControl, PCEFTPOSControl, and PCEFTPOSControlAsync implement the SocketEventListener.
 In their constructors, they take in a PCEFTPOSEventListener as a parameter, and the event method calls are passed to this object.
 
@@ -102,7 +103,3 @@ Handle the returned event.
 # Contribute
 If there is something missing, or something that doesn't work the way it should then please send an email to devsupport@pceftpos.com.au and we'll add it in/take it out.
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://www.visualstudio.com/en-us/docs/git/create-a-readme). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
