@@ -9,16 +9,13 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6fcd7204-5368-4b25-a6b2-738c934a4be1" name="Default" comment="Project rename.">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/SDK_EFTClient_Java_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/SDK_EFTClient_Java_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="6fcd7204-5368-4b25-a6b2-738c934a4be1" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/README-INTERNAL.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDK.EFTClient.Java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PCEFTPOS.EFTClient.IPInterface.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,45 +24,57 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/SDK_EFTClient_Java$AsyncMainWindow.ic" NAME="AsyncMainWindow Coverage Results" MODIFIED="1527232704198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1663766407">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="md" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PLAIN_TEXT" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="md" value="1054" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PLAIN_TEXT" value="1054" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AsyncMainWindow.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GUI/AsyncMainWindow.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2448">
-              <caret line="310" selection-start-line="310" selection-end-line="310" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2058#4412#0" />
-                <element signature="method#DoSetDialog#0;class#AsyncMainWindow#0" />
-                <element signature="method#DoReprintReceipt#0;class#AsyncMainWindow#0" />
-                <element signature="method#DoGetLastTransaction#0;class#AsyncMainWindow#0" />
-                <element signature="method#DoSettlement#0;class#AsyncMainWindow#0" />
-                <element signature="method#DoPurchase#0;class#AsyncMainWindow#0" />
-                <element signature="method#DoLogon#0;class#AsyncMainWindow#0" />
-                <element signature="method#DoStatus#0;class#AsyncMainWindow#0" />
-                <element signature="method#onLogonEvent#0;class#AsyncMainWindow#0" />
-                <element signature="method#onDisplayEvent#0;class#AsyncMainWindow#0" />
-                <element signature="method#onStatusEvent#0;class#AsyncMainWindow#0" />
-                <element signature="method#onSettlementEvent#0;class#AsyncMainWindow#0" />
-                <element signature="method#onGetLastTransactionEvent#0;class#AsyncMainWindow#0" />
-                <element signature="method#onReprintReceiptEvent#0;class#AsyncMainWindow#0" />
-                <element signature="method#onControlPanelEvent#0;class#AsyncMainWindow#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="581">
+              <caret line="40" column="92" selection-start-line="40" selection-start-column="92" selection-end-line="40" selection-end-column="92" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AsyncSocket.java" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README-INTERNAL.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="130" lean-forward="true" selection-start-line="11" selection-start-column="130" selection-end-line="11" selection-end-column="130" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AsyncSocket.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1071">
@@ -74,7 +83,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainWindow.java" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GUI/MainWindow.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3944">
@@ -93,7 +102,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EFTStatusResponse.java" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EFTStatusResponse.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
@@ -102,7 +111,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EFTReprintReceiptResponse.java" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EFTReprintReceiptResponse.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
@@ -111,7 +120,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EFTSendKeyRequest.java" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EFTSendKeyRequest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -120,7 +129,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PCEFTPOSControl.java" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PCEFTPOSControl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="578">
@@ -129,7 +138,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PCEFTPOSEventListener.java" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PCEFTPOSEventListener.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
@@ -138,7 +147,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AsyncSocketControl.java" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AsyncSocketControl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="969">
@@ -175,7 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/EFTResponse.java" />
         <option value="$PROJECT_DIR$/src/EFTLogonRequest.java" />
         <option value="$PROJECT_DIR$/src/EFTReceiptRequest.java" />
         <option value="$PROJECT_DIR$/src/EFTReceiptResponse.java" />
@@ -213,7 +221,6 @@
         <option value="$PROJECT_DIR$/src/EFTDisplayResponse.java" />
         <option value="$PROJECT_DIR$/src/EFTGetLastTransactionRequest.java" />
         <option value="$PROJECT_DIR$/src/EFTGetLastTransactionResponse.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/GUI/AsyncMainWindow.form" />
         <option value="$PROJECT_DIR$/src/SocketThread.java" />
         <option value="$PROJECT_DIR$/src/PCEFTPOSControl.java" />
@@ -225,6 +232,8 @@
         <option value="$PROJECT_DIR$/GUI/AsyncMainWindow.java" />
         <option value="$PROJECT_DIR$/GUI/MainWindow.java" />
         <option value="$PROJECT_DIR$/src/AsyncSocket.java" />
+        <option value="$PROJECT_DIR$/README-INTERNAL.md" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -243,20 +252,20 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="pceftpos.eftclient.ipinterface" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PCEFTPOS.EFTClient.IPInterface" type="b2602c69:ProjectViewProjectNode" />
               <item name="PCEFTPOS.EFTClient.IPInterface" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -268,6 +277,7 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="sdk.eftclient.java" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534125860193" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -300,63 +310,48 @@
       <option name="MAIN_CLASS_NAME" value="AsyncMainWindow" />
       <module name="PCEFTPOS.EFTClient.IPInterface" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="MainWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainWindow" />
       <module name="PCEFTPOS.EFTClient.IPInterface" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="MainWindow" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="JavaClient" type="JarApplication" factoryName="JAR Application">
       <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/SDK_EFTClient_Java_jar/SDK.EFTClient.Java.jar" />
       <option name="WORKING_DIRECTORY" value="C:\Users\scoianiz\Documents\vsts\SDK.EFTClient.Java" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
+      <method v="2">
         <option name="BuildArtifacts" enabled="true">
           <artifact name="SDK.EFTClient.Java.jar" />
         </option>
       </method>
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <list>
       <item itemvalue="JAR Application.JavaClient" />
@@ -479,42 +474,49 @@
       <option name="project" value="LOCAL" />
       <updated>1531442487729</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Project rename and Readme update.">
+      <created>1531450191201</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1531450191201</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1351" extended-state="6" />
+    <frame x="-8" y="-8" width="2576" height="1311" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32928804" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32943144" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.08984375" />
-      <window_info id="Learn" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09062003" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.2540453" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32928804" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="4" side_tool="true" weight="0.3296875" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection Results" order="8" weight="0.32943144" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Learn" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32943144" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32928804" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2540453" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32943144" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32928804" />
+      <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.32943144" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.3296875" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -535,26 +537,15 @@
     <MESSAGE value="Rejiggered the manifest so hopefully it builds an executable .jar.&#10;It works (it displays the GUI at least) on the raspberry pi.&#10;Rejiggered the readme for readability." />
     <MESSAGE value="Added ability to change socket connections.&#10;Does not work with synchronous PCEFTPOSControl class. Completely dead.&#10;Changed look and feel of the asyncWindow" />
     <MESSAGE value="V4 client connection was sending a #0005  message to client on connection, and receiving a Pinpad Busy response that the Java code wasn't dealing with. So added in a response class and now the POS will display the Pinpad busy message instead of closing the socket." />
-    <option name="LAST_COMMIT_MESSAGE" value="V4 client connection was sending a #0005  message to client on connection, and receiving a Pinpad Busy response that the Java code wasn't dealing with. So added in a response class and now the POS will display the Pinpad busy message instead of closing the socket." />
+    <MESSAGE value="Project rename and Readme update." />
+    <option name="LAST_COMMIT_MESSAGE" value="Project rename and Readme update." />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="57" />
-    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/EFTTransactionRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/EFTTransactionResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4726">
@@ -761,100 +752,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1309">
           <caret line="89" column="22" selection-start-line="89" selection-start-column="22" selection-end-line="89" selection-end-column="22" />
-          <folding>
-            <element signature="method#MessageParser#0;class#MessageParser#0" />
-            <element signature="method#ParseSetDialogResponse#0;class#MessageParser#0" />
-            <element signature="method#ParseControlPanelResponse#0;class#MessageParser#0" />
-            <element signature="method#ParseEFTReprintReceiptResponse#0;class#MessageParser#0" />
-            <element signature="method#ParseGetLastTransactionResponse#0;class#MessageParser#0" />
-            <element signature="method#ParseSettlementResponse#0;class#MessageParser#0" />
-            <element signature="method#ParseStatusResponse#0;class#MessageParser#0" />
-            <element signature="method#ParseDisplayResponseType#0;class#MessageParser#0" />
-            <element signature="method#ParseTransactionResponse#0;class#MessageParser#0" />
-            <element signature="method#ParseReceiptResponse#0;class#MessageParser#0" />
-            <element signature="method#EFTRequestToString#0;class#MessageParser#0" />
-            <element signature="method#BuildRequest#0;class#MessageParser#0" />
-            <element signature="method#BuildEFTSetDialogRequest#0;class#MessageParser#0" />
-            <element signature="method#BuildEFTReprintReceiptRequest#0;class#MessageParser#0" />
-            <element signature="method#BuildEFTGetLastTransactionRequest#0;class#MessageParser#0" />
-            <element signature="method#BuildSettlementRequest#0;class#MessageParser#0" />
-            <element signature="method#BuildStatusRequest#0;class#MessageParser#0" />
-            <element signature="method#BuildEFTTransactionRequest#0;class#MessageParser#0" />
-            <element signature="method#BuildEFTLogonRequest#0;class#MessageParser#0" />
-            <element signature="method#BuildSendKeyRequest#0;class#MessageParser#0" />
-            <element signature="n#!!doc;n#ParsePinpadOptions#0;n#MessageParser#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EFTStatusResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EFTReprintReceiptResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EFTSendKeyRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GUI/AsyncMainWindow.form">
       <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PCEFTPOSControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="39" column="30" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PCEFTPOSEventListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AsyncSocketControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/MainWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3944">
-          <caret line="359" column="28" selection-start-line="359" selection-start-column="28" selection-end-line="359" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="n#!!doc;n#DoTransaction#0;n#MainWindow#0" />
-            <element signature="method#DoTransaction#0;class#MainWindow#0" />
-            <element signature="method#DoReprintReceipt#0;class#MainWindow#0" />
-            <element signature="method#DoGetLastTransaction#0;class#MainWindow#0" />
-            <element signature="method#DoSettlement#0;class#MainWindow#0" />
-            <element signature="method#DoLogon#0;class#MainWindow#0" />
-            <element signature="method#DoStatus#0;class#MainWindow#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AsyncSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GUI/AsyncMainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -881,10 +783,83 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/AsyncSocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/MainWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3944">
+          <caret line="359" column="28" selection-start-line="359" selection-start-column="28" selection-end-line="359" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="n#!!doc;n#DoTransaction#0;n#MainWindow#0" />
+            <element signature="method#DoTransaction#0;class#MainWindow#0" />
+            <element signature="method#DoReprintReceipt#0;class#MainWindow#0" />
+            <element signature="method#DoGetLastTransaction#0;class#MainWindow#0" />
+            <element signature="method#DoSettlement#0;class#MainWindow#0" />
+            <element signature="method#DoLogon#0;class#MainWindow#0" />
+            <element signature="method#DoStatus#0;class#MainWindow#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EFTStatusResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EFTReprintReceiptResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EFTSendKeyRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PCEFTPOSControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="39" column="30" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PCEFTPOSEventListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AsyncSocketControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="581">
+          <caret line="40" column="92" selection-start-line="40" selection-start-column="92" selection-end-line="40" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README-INTERNAL.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="130" lean-forward="true" selection-start-line="11" selection-start-column="130" selection-end-line="11" selection-end-column="130" />
         </state>
       </provider>
     </entry>
