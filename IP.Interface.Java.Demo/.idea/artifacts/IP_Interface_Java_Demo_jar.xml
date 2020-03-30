@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact name="IP.Interface.Java.Demo:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/IP_Interface_Java_Demo_jar</output-path>
+    <root id="root">
+      <element id="archive" name="IP.Interface.Java.Demo.jar">
+        <element id="module-output" name="IP.Interface.Java.Demo" />
+      </element>
+      <element id="library" level="project" name="json-simple-1.1" />
+    </root>
+  </artifact>
+</component>

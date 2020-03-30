@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IPInterfaceJavaAndroidDemo</string>
+    <string-array name="txn_types">
+        <item>Purchase</item>
+        <item>Refund</item>
+        <item>Cash Out</item>
+    </string-array>
+</resources>

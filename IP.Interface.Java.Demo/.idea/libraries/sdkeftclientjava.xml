@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="sdkeftclientjava">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/sdkeftclientjava.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
