@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="sdkeftclientjava">
+  <artifact type="jar" build-on-make="true" name="sdkeftclientjava">
     <output-path>$PROJECT_DIR$/out/lib</output-path>
     <root id="archive" name="sdkeftclientjava.jar">
       <element id="directory" name="META-INF">

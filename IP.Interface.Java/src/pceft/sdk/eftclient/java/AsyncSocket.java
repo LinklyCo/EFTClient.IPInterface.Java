@@ -12,17 +12,15 @@ import java.util.*;
 /**
  * This socket class uses sock channels, selectors and keys. It will run on a separate thread.
  */
-public class AsyncSocket implements Runnable {
+public class AsyncSocket extends Thread {
 
     public Selector selector;
-    private InetSocketAddress sockAddress;
-    private SocketEventListener _listener;
-    private MessageParser parser = new MessageParser();
+    private final InetSocketAddress sockAddress;
+    private final SocketEventListener _listener;
+    private final MessageParser parser = new MessageParser();
     private IOException IoException = null;
-    private String IoExceptionMessage = "";
     private ClosedSelectorException ClosedException = null;
     private Exception GeneralException = null;
-    private String ClosedExceptionMessage = "";
     public SocketChannel channel;
 
     public AsyncSocket(String host, int port, SocketEventListener listener) {
@@ -37,13 +35,14 @@ public class AsyncSocket implements Runnable {
     public void run() {
         try {
             selector = Selector.open();
-            channel = SocketChannel.open();
+            channel = SocketChannel.open(sockAddress);
             channel.configureBlocking(false);
 
             channel.register(selector, SelectionKey.OP_CONNECT);
-            channel.connect(sockAddress);
-
-            while (!Thread.interrupted()) {
+            if (!channel.isConnected()) {
+                channel.connect(sockAddress);
+            }
+            while (!isInterrupted()) {
 
                 selector.select(1000);
                 Iterator<SelectionKey> keys = selector.selectedKeys().iterator();
@@ -67,42 +66,40 @@ public class AsyncSocket implements Runnable {
             }
         } catch (ClosedSelectorException ex) {
             ClosedException = ex;
-            ClosedExceptionMessage = ex.getMessage();
         } catch (IOException ioex) {
             IoException = ioex;
-            IoExceptionMessage = ioex.getMessage();
+            ioex.printStackTrace();
         } catch (Exception e) {
             GeneralException = e;
+            e.printStackTrace();
+        } finally {
+            closeSocket();
         }
-        //finally {
-        //       close();
-        //}
     }
 
     public boolean isConnected() {
-        if (ClosedException == null && IoException == null) {
-            if (selector != null)
-                return selector.isOpen();
-            else
-                return false;
-        } else
+        if (isInterrupted() || selector == null)
             return false;
+
+        return selector.isOpen();
     }
 
+    public void close() {
+        interrupt();
+        ClosedException = new ClosedSelectorException();
+    }
 
-    void close() {
+    private void closeSocket() {
         try {
+            channel.close();
             selector.close();
         } catch (IOException ex) {
             IoException = ex;
-            IoExceptionMessage = ex.getMessage();
         } catch (ClosedSelectorException exc) {
             ClosedException = exc;
-            ClosedExceptionMessage = exc.getMessage();
         } catch (Exception e) {
             GeneralException = e;
         }
-
     }
 
     public Exception getException() {
@@ -112,10 +109,14 @@ public class AsyncSocket implements Runnable {
             return ClosedException;
         if (GeneralException != null)
             return GeneralException;
-        else return null;
+
+        return null;
     }
 
-    private void read(SelectionKey key) throws IOException {
+    private void read(SelectionKey key) throws IOException, ClosedSelectorException {
+        if (isInterrupted())
+            throw new ClosedSelectorException();
+
         SocketChannel channel = (SocketChannel) key.channel();
 
         ByteBuffer readBuffer = ByteBuffer.allocate(2048);
@@ -125,13 +126,11 @@ public class AsyncSocket implements Runnable {
             length = channel.read(readBuffer);
         } catch (IOException ex) {
             key.cancel();
-            channel.close();
             throw ex;
         }
         if (length == -1) {
-            channel.close();
             key.cancel();
-            throw new IOException("Nothing was read from the client");
+            return;
         }
         readBuffer.flip();
         byte[] buff = new byte[2048];
@@ -148,39 +147,30 @@ public class AsyncSocket implements Runnable {
         }
         // String may be multiple messages i.e "#0099...#0007L "
         // ...
-        //String[] messages = s.split("#");
         ArrayList<String> messages = MessageSplit(s);
-        for (String msg : messages
-                ) {
+        for (String msg : messages) {
             if (msg.length() > 0) {
-
                 _listener.socketReceive(msg);
             }
         }
-
     }
 
-    ArrayList<String> MessageSplit(String s){
-        ArrayList<String> msgs = new ArrayList<String>();
-        while (s != null && s.length() > 0)
-        {
+    private ArrayList<String> MessageSplit(String s) {
+        ArrayList<String> msgs = new ArrayList<>();
+        while (s != null && s.length() > 0) {
             if (s.charAt(0) != '#') {
                 // Drop msg
                 s = null;
-            }
-            else if (s.length() < 5) {
+            } else if (s.length() < 5) {
                 // Drop msg
                 s = null;
             }
-            if (s != null)
-            {
-                int lengthMsg = Integer.parseInt(s.substring(1,5));
-                msgs.add(s.substring(0,lengthMsg));
-                if (lengthMsg >= s.length())
-                {
+            if (s != null) {
+                int lengthMsg = Integer.parseInt(s.substring(1, 5));
+                msgs.add(s.substring(0, lengthMsg));
+                if (lengthMsg >= s.length()) {
                     s = null;
-                }
-                else{
+                } else {
                     s = s.substring(lengthMsg);
                 }
             }
@@ -189,11 +179,28 @@ public class AsyncSocket implements Runnable {
         return msgs;
     }
 
-    void write(SelectionKey key, EFTRequest request) throws IOException {
+    void writeRaw(String rawRequestString) throws IOException, ClosedSelectorException {
+        SelectionKey key = selector.keys().iterator().next();
+        writeRaw(key, rawRequestString);
+    }
+
+    void writeRaw(SelectionKey key, String rawRequestString) throws IOException, ClosedSelectorException {
+        if (isInterrupted())
+            throw new ClosedSelectorException();
+
         SocketChannel channel = (SocketChannel) key.channel();
-        String message = parser.EFTRequestToString(request);
-        channel.write(ByteBuffer.wrap(message.getBytes()));
+
+        channel.write(ByteBuffer.wrap(rawRequestString.getBytes()));
         key.interestOps(SelectionKey.OP_READ);
+    }
+
+    void write(EFTRequest request) throws IOException, ClosedSelectorException, NoSuchElementException {
+        SelectionKey key = selector.keys().iterator().next();
+        write(key, request);
+    }
+
+    private void write(SelectionKey key, EFTRequest request) throws IOException, ClosedSelectorException {
+        writeRaw(key, parser.EFTRequestToString(request));
     }
 
     private void connect(SelectionKey key) throws IOException {
@@ -201,8 +208,9 @@ public class AsyncSocket implements Runnable {
         if (!channel.isConnected()) {
             if (channel.isConnectionPending()) {
                 channel.finishConnect();
-            } else
+            } else {
                 channel.connect(sockAddress);
+            }
         }
         channel.configureBlocking(false);
         channel.register(selector, SelectionKey.OP_WRITE);

@@ -1,6 +1,6 @@
 package pceft.sdk.eftclient.java;
 
-import java.time.Instant;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.EnumSet;
 
@@ -192,17 +192,6 @@ public class EFTStatusResponse extends EFTResponse {
 
     public void setNetType(EFTStatusRequest.NetworkType netType) {
         NetType = netType;
-    }
-
-    public EFTStatusRequest.NetworkType setNetType(char c) {
-        switch (c) {
-            case ('0'):
-                return EFTStatusRequest.NetworkType.Leased;
-            case ('1'):
-                return EFTStatusRequest.NetworkType.Dialup;
-            default:
-                return EFTStatusRequest.NetworkType.Unknown;
-        }
     }
 
     /**
@@ -478,7 +467,7 @@ public class EFTStatusResponse extends EFTResponse {
     /**
      * <summary>The date the hardware was incepted.</summary>
      */
-    public Date HardwareInceptionDate = Date.from(Instant.now());
+    public Date HardwareInceptionDate = Calendar.getInstance().getTime();
 
     public Date getHardwareInceptionDate() {
         return HardwareInceptionDate;

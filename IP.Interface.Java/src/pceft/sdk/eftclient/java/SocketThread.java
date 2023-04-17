@@ -11,7 +11,6 @@ public class SocketThread extends Thread {
     private MessageParser parser = new MessageParser();
 
     public SocketThread(String inetAddr, int inetPort, SocketEventListener listener) {
-        // Set the listener
         this.listener = listener;
 
         // Create a new socket

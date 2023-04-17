@@ -178,7 +178,7 @@ private void DoPurchase() {
         purchaseReq.Merchant = "00";
         purchaseReq.Application = EFTTransactionRequest.TerminalApplication.EFTPOS;
         purchaseReq.TxnRef = "1234";
-        purchaseReq.BankDate = Date.from(Instant.now());
+        purchaseReq.BankDate = Calendar.getInstance().getTime();
         purchaseReq.TxnType = EFTTransactionRequest.TransactionType.PurchaseCash;
         if (ctrl.socket.isConnected())
             try {
@@ -215,11 +215,35 @@ Check out the message specification inside of the [API Documentation](https://pc
 
 # Release Notes
 
-##v1.0.0.0 - Callum Hands
+## v1.1.0.0 - Robert Whitlock
+- `AsyncSocket`/`AsyncSSLSocket`: `close()` now closes socket and stops 
+  - NOTE: After close is called, this class will need to be reinstantiated to connect/resume communication 
+- `AsyncSocketControl`/`AsyncSSLSocketControl`
+  - `close()` now waits for socket thread to join.
+    - Now returns boolean depending on success (rather than a hard-coded string that doesn't give any valid information)
+    - Default wait is 1s
+    - New overload `close(int maxWaitMillis)` gives control over maximum wait time
+  - constructor/`socketSend`/`socketSendRaw` both yield thread execution to give the action a chance to occur
+  - Added `isConnected()` to simplify checks rather than calling `socket.isConnected()`
+  - Aligned classes to be more similar:
+    - `AsyncSocketControl`:
+	  - Added `socketSendRaw(String request)` method to send string data
+- Message Parsing
+  - `EFTResponse` parsing now more resilient
+  - Fixing parsing in EFTGetLastTransactionResponse to include `ClearedFundsBalance`
+  - `EFTPinResponse`'s `AccountType` is now `EFTTransactionRequest.AccountType` rather than `String`
+  - `EFTQueryCardRequest` now parses the response data. Added `getTrack1` and `getTrack3` to retrieve the correct track1/track3 data
+- Adding Implementation-Version to jar file `MANIFEST.MF`
+- [IAAS-1537] Some amounts entered in Cloud Test POS or MPOS app are rounded down by 1c
+- Passing AsyncSSLSocketControl exceptions up to the caller
+- Removing RedirectPort/RedirectAddress
+- Using Calendar.getInstance().getTime rather than Date.from(Instant.now()) for greater compatibility
 
+
+## v1.0.0.0 - Callum Hands
 - Added AsyncSSLSocket for socket connections to pos.cloud.pceftpos
 - Added Remaining EFTRequests, according to the [API Documentation for TCPIP](https://pceftpos.com/apidoc/TCPIP/#message-specification)
 
-##v0.0.9.0 - Samuel Coianiz
+## v0.0.9.0 - Samuel Coianiz
 - Initial Commit
     - Implemented most common EFTRequests 

@@ -1,6 +1,6 @@
 package pceft.sdk.eftclient.java;
 
-import java.time.Instant;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -35,7 +35,7 @@ public class EFTLogonResponse extends EFTResponse{
     public void setSuccess(boolean success) {
         Success = success;
     }
-    public void setSucces(char c){
+    public void setSuccess(char c){
         if (c == '1')
             Success = true;
         else if (c == '0')
@@ -68,7 +68,7 @@ public class EFTLogonResponse extends EFTResponse{
     /**
      * Date and time of the response returned by the bank
      */
-    public Date BankDate = Date.from(Instant.EPOCH);
+    public Date BankDate = Calendar.getInstance().getTime();
     public Date getBankDate() {
         return BankDate;
     }

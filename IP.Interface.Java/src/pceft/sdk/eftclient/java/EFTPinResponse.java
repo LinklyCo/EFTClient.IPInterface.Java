@@ -3,7 +3,7 @@ package pceft.sdk.eftclient.java;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.Instant;
+import java.util.Calendar;
 import java.util.Date;
 
 public class EFTPinResponse extends EFTResponse {
@@ -61,11 +61,11 @@ public class EFTPinResponse extends EFTResponse {
         TxnType = txnType;
     }
 
-    public String AccountType = "";
-    public String getAccountType() {
+    public EFTTransactionRequest.AccountType AccountType = EFTTransactionRequest.AccountType.Default;
+    public EFTTransactionRequest.AccountType getAccountType() {
         return AccountType;
     }
-    public void setAccountType(String accountType) {
+    public void setAccountType(EFTTransactionRequest.AccountType accountType) {
         AccountType = accountType;
     }
 
@@ -148,7 +148,7 @@ public class EFTPinResponse extends EFTResponse {
         DateSettlement = dateSettlement;
     }
 
-    public Date BankDate = Date.from(Instant.now());
+    public Date BankDate = Calendar.getInstance().getTime();
     public Date getBankDate() {
         return BankDate;
     }
@@ -164,20 +164,6 @@ public class EFTPinResponse extends EFTResponse {
 
         }
         return BankDate;
-    }
-
-    public EFTTransactionRequest.AccountType setCardAccountType(String msg){
-        if(msg.toUpperCase().trim().equals("CREDIT")){
-            return EFTTransactionRequest.AccountType.Credit;
-        }
-        else if(msg.toUpperCase().trim().equals("SAVINGS")){
-            return EFTTransactionRequest.AccountType.Savings;
-        }
-        else if(msg.toUpperCase().trim().equals("CHEQUE")){
-            return EFTTransactionRequest.AccountType.Cheque;
-        }
-        else
-            return EFTTransactionRequest.AccountType.Default;
     }
 
     public String PAN = "";

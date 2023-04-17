@@ -3,7 +3,7 @@ package pceft.sdk.eftclient.java;//import javafx.beans.binding.StringExpression;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.Instant;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -46,73 +46,6 @@ public class EFTGetLastTransactionResponse extends EFTResponse {
 
     public void setTxnType(EFTTransactionRequest.TransactionType txnType) {
         TxnType = txnType;
-    }
-
-    public EFTTransactionRequest.TransactionType setTxnType(char c) {
-        EFTTransactionRequest.TransactionType r = null;
-        switch (c) {
-            case ' ':
-                r = EFTTransactionRequest.TransactionType.NotSet;
-                break;
-            case 'P':
-                r = EFTTransactionRequest.TransactionType.PurchaseCash;
-                break;
-            case 'C':
-                r = EFTTransactionRequest.TransactionType.CashOut;
-                break;
-            case 'R':
-                r = EFTTransactionRequest.TransactionType.Refund;
-                break;
-            case 'A':
-                r = EFTTransactionRequest.TransactionType.PreAuth;
-                break;
-            case 'L':
-                r = EFTTransactionRequest.TransactionType.PreAuthCompletion;
-                break;
-            case 'N':
-                r = EFTTransactionRequest.TransactionType.PreAuthEnquiry;
-                break;
-            case 'Q':
-                r = EFTTransactionRequest.TransactionType.PreAuthCancel;
-                break;
-            case 'M':
-                r = EFTTransactionRequest.TransactionType.Completion;
-                break;
-            case 'T':
-                r = EFTTransactionRequest.TransactionType.TipAdjust;
-                break;
-            case 'D':
-                r = EFTTransactionRequest.TransactionType.Deposit;
-                break;
-            case 'W':
-                r = EFTTransactionRequest.TransactionType.Withdrawal;
-                break;
-            case 'B':
-                r = EFTTransactionRequest.TransactionType.Balance;
-                break;
-            case 'V':
-                r = EFTTransactionRequest.TransactionType.Voucher;
-                break;
-            case 'F':
-                r = EFTTransactionRequest.TransactionType.FundsTransfer;
-                break;
-            case 'O':
-                r = EFTTransactionRequest.TransactionType.OrderRequest;
-                break;
-            case 'H':
-                r = EFTTransactionRequest.TransactionType.MiniTransactionHistory;
-                break;
-            case 'X':
-                r = EFTTransactionRequest.TransactionType.AuthPIN;
-                break;
-            case 'K':
-                r = EFTTransactionRequest.TransactionType.EnhancedPIN;
-                break;
-            case '0':
-                r = EFTTransactionRequest.TransactionType.None;
-                break;
-        }
-        return r;
     }
 
     /**
@@ -163,7 +96,7 @@ public class EFTGetLastTransactionResponse extends EFTResponse {
      * @value Type: Date. Settlement date is returned from the bank.
      * Use this property to balance POS EFT totals with settlement EFT totals.
      */
-    public Date SettlementDate = Date.from(Instant.now());
+    public Date SettlementDate = Calendar.getInstance().getTime();
 
     public Date getSettlementDate() {
         return SettlementDate;
@@ -324,17 +257,6 @@ public class EFTGetLastTransactionResponse extends EFTResponse {
         CardAccountType = cardAccountType;
     }
 
-    public EFTTransactionRequest.AccountType setCardAccountType(String msg) {
-        if (msg.toUpperCase().trim().equals("CREDIT")) {
-            return EFTTransactionRequest.AccountType.Credit;
-        } else if (msg.toUpperCase().trim().equals("SAVINGS")) {
-            return EFTTransactionRequest.AccountType.Savings;
-        } else if (msg.toUpperCase().trim().equals("CHEQUE")) {
-            return EFTTransactionRequest.AccountType.Cheque;
-        } else
-            return EFTTransactionRequest.AccountType.Default;
-    }
-
     /**
      * Indicates if the last transaction was successful
      */
@@ -380,13 +302,23 @@ public class EFTGetLastTransactionResponse extends EFTResponse {
      * @value type: double.
      */
     public double AvailableBalance = 0;
-
     public double getAvailableBalance() {
         return AvailableBalance;
     }
-
     public void setAvailableBalance(double availableBalance) {
         AvailableBalance = availableBalance;
+    }
+
+    /**
+     * Cleared balance on the processed account.
+     * @value Type: double
+     */
+    public double ClearedFundsBalance = 0;
+    public double getClearedFundsBalance() {
+        return ClearedFundsBalance;
+    }
+    public void setClearedFundsBalance(double clearedFundsBalance) {
+        ClearedFundsBalance = clearedFundsBalance;
     }
 
     /**
@@ -413,7 +345,7 @@ public class EFTGetLastTransactionResponse extends EFTResponse {
         Success = success;
     }
 
-    public void setSucces(char c) {
+    public void setSuccess(char c) {
         if (c == '1')
             Success = true;
         else if (c == '0')
@@ -456,7 +388,7 @@ public class EFTGetLastTransactionResponse extends EFTResponse {
      *
      * @value Type: Date
      */
-    public Date BankDate = Date.from(Instant.now());
+    public Date BankDate = Calendar.getInstance().getTime();
 
     public Date getBankDate() {
         return BankDate;

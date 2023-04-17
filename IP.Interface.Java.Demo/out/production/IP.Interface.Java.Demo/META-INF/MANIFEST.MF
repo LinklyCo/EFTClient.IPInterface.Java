@@ -1,4 +1,0 @@
-Manifest-Version: 1.0
-Main-Class: AsyncMainWindow
-Class-Path: SDK.EFTClient.Java.jar JSON.jar json-simple-1.1.jar
-

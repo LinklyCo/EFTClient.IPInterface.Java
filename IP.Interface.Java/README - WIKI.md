@@ -334,7 +334,7 @@ newTxn.AmtCash = 0.00;
 newTxn.Merchant = MerchantBox.getText();
 newTxn.Application = EFTTransactionRequest.TerminalApplication.EFTPOS;
 newTxn.TxnRef = "270220201003333 ";
-newTxn.BankDate = Date.from(Instant.now());
+newTxn.BankDate = Calendar.getInstance().getTime();
 newTxn.PurchaseAnalysisData = PADTxtBox.getText();
 newTxn.TxnType = EFTTransactionRequest.TransactionType.PurchaseCash;
 AsyncSocketControl ctrl.socketSend(newTxn);
